@@ -1,0 +1,9 @@
+<%= simple_form_for @memory,
+  :html => { :multipart => true} do |f| %>
+  <%= f.input :title %>
+  <%= f.fields_for :images do |image| %>
+    <%= image.file_field :photo %>
+  <% end %>
+  <%= f.input :memory %>
+  <%= f.submit "+ Memory" %>
+<% end %>

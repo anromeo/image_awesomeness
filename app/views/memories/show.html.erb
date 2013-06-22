@@ -1,0 +1,9 @@
+<h2><%= @memory.title %></h2>
+<p>
+  <%= @memory.memory %>
+</p>
+<% @memory.images.each do |pic| %>
+  <%= image_tag pic.photo_url(:thumb).to_s %>
+  <%= image_tag pic.photo_url(:medium).to_s %>
+  <%= image_tag pic.photo_url(:large).to_s %>
+<% end %>
